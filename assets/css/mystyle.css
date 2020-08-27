@@ -1,0 +1,46 @@
+.snav {
+	height: 100%;
+}
+
+.bg-orange {
+	background-color: #e67f22 !important;
+}
+
+.bg-orange th {
+	color: white;
+}
+
+.nav-link {
+	color: white !important;
+	font-weight: 500;
+}
+
+.profile-preview {
+	width: 250px !important;
+	height: 250px !important;
+}
+
+.card-img-top {
+	max-width: 100% !important;
+	max-height: 400px !important;
+}
+
+.img-table {
+	max-width: 200px;
+	max-height: 150px;
+	object-fit: scale-down;
+}
+
+.post-thumbnail {
+	max-width: 100% !important;
+	object-fit: scale-down;
+	max-height: 400px !important;
+}
+
+.ellipsis {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
