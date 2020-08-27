@@ -25,12 +25,12 @@ class Comment_con extends RestController
             $this->response([
                 'status' => true,
                 'data' => $comment
-            ]);
+            ], 200);
         } else {
             $this->response([
                 'status' => false,
                 'message' => 'Belum ada komentar!'
-            ]);
+            ], 200);
         }
     }
 
@@ -46,12 +46,12 @@ class Comment_con extends RestController
             $this->response([
                 'status' => true,
                 'message' => 'Komentar berhasil ditambahkan.'
-            ]);
+            ], 200);
         } else {
             $this->response([
                 'status' => true,
                 'message' => 'Komentar tidak berhasil ditambahkan'
-            ]);
+            ], 200);
         }
     }
 
@@ -63,12 +63,12 @@ class Comment_con extends RestController
             $this->response([
                 'status' => true,
                 'message' => 'Komentar berhasil dihapus.'
-            ]);
+            ], 200);
         } else {
             $this->response([
                 'status' => false,
                 'message' => 'Komentar tidak berhasil dihapus!'
-            ]);
+            ], 200);
         }
     }
 }

@@ -20,12 +20,12 @@ class Post_con extends RestController
             $this->response([
                 'status' => true,
                 'data' => $post
-            ]);
+            ], 200);
         } else {
             $this->response([
                 'status' => false,
                 'message' => 'Postingan tidak ditemukan!'
-            ]);
+            ], 200);
         }
     }
 
@@ -40,12 +40,12 @@ class Post_con extends RestController
             $this->response([
                 'status' => true,
                 'data' => $previous
-            ]);
+            ], 200);
         } else {
             $this->response([
                 'status' => false,
                 'message' => 'Postingan tidak ditemukan!'
-            ]);
+            ], 200);
         }
     }
 
@@ -60,12 +60,12 @@ class Post_con extends RestController
             $this->response([
                 'status' => true,
                 'data' => $next
-            ]);
+            ], 200);
         } else {
             $this->response([
                 'status' => false,
                 'message' => 'Postingan tidak ditemukan!'
-            ]);
+            ], 200);
         }
     }
 
@@ -78,12 +78,12 @@ class Post_con extends RestController
             $this->response([
                 'status' => true,
                 'data' => $post
-            ]);
+            ], 200);
         } else {
             $this->response([
                 'status' => false,
                 'message' => 'Postingan tidak ditemukan!'
-            ]);
+            ], 200);
         }
     }
 
@@ -96,12 +96,12 @@ class Post_con extends RestController
             $this->response([
                 'status' => true,
                 'data' => $post
-            ]);
+            ], 200);
         } else {
             $this->response([
                 'status' => false,
                 'message' => 'Postingan tidak ditemukan!'
-            ]);
+            ], 200);
         }
     }
 
@@ -113,12 +113,12 @@ class Post_con extends RestController
             $this->response([
                 'status' => true,
                 'data' => $post
-            ]);
+            ], 200);
         } else {
             $this->response([
                 'status' => false,
                 'message' => 'Postingan tidak ditemukan!'
-            ]);
+            ], 200);
         }
     }
 
@@ -130,12 +130,12 @@ class Post_con extends RestController
             $this->response([
                 'status' => true,
                 'data' => $post
-            ]);
+            ], 200);
         } else {
             $this->response([
                 'status' => false,
                 'message' => 'Postingan tidak ditemukan!'
-            ]);
+            ], 200);
         }
     }
 
@@ -166,12 +166,12 @@ class Post_con extends RestController
             $this->response([
                 'status' => true,
                 'message' => 'Postingan berhasil dibuat.'
-            ]);
+            ], 200);
         } else {
             $this->response([
                 'status' => false,
                 'message' => 'Postingan tidak berhasil dibuat!'
-            ]);
+            ], 200);
         }
     }
 
@@ -191,18 +191,18 @@ class Post_con extends RestController
             $this->response([
                 'status' => false,
                 'message' => 'Masukkan id postingan!'
-            ]);
+            ], 200);
         } else {
             if ($this->post->editPost($data, $id) > 0) {
                 $this->response([
                     'status' => true,
                     'message' => 'Postingan berhasil diedit.'
-                ]);
+                ], 200);
             } else {
                 $this->response([
                     'status' => false,
                     'message' => 'Id postingan tidak ditemukan!'
-                ]);
+                ], 200);
             }
         }
     }
@@ -223,18 +223,18 @@ class Post_con extends RestController
             $this->response([
                 'status' => false,
                 'message' => 'Masukkan id postingan!'
-            ]);
+            ], 200);
         } else {
             if ($this->post->editPost($data, $id) > 0) {
                 $this->response([
                     'status' => true,
                     'message' => 'Postingan berhasil diedit.'
-                ]);
+                ], 200);
             } else {
                 $this->response([
                     'status' => false,
                     'message' => 'Id postingan tidak ditemukan!'
-                ]);
+                ], 200);
             }
         }
     }
@@ -247,18 +247,18 @@ class Post_con extends RestController
             $this->response([
                 'status' => false,
                 'message' => 'Masukkan id postingan!'
-            ]);
+            ], 200);
         } else {
             if ($this->post->tempdelPost($id) > 0) {
                 $this->response([
                     'status' => true,
                     'message' => 'Postingan berhasil dipindahkan ke recycle bin.'
-                ]);
+                ], 200);
             } else {
                 $this->response([
                     'status' => false,
                     'message' => 'id postingan tidak ditemukan!'
-                ]);
+                ], 200);
             }
         }
     }
@@ -271,18 +271,18 @@ class Post_con extends RestController
             $this->response([
                 'status' => false,
                 'message' => 'Masukkan id postingan!'
-            ]);
+            ], 200);
         } else {
             if ($this->post->restorePost($id) > 0) {
                 $this->response([
                     'status' => true,
                     'message' => 'Postingan berhasil dipulihkan.'
-                ]);
+                ], 200);
             } else {
                 $this->response([
                     'status' => false,
                     'message' => 'id postingan tidak ditemukan!'
-                ]);
+                ], 200);
             }
         }
     }
@@ -295,19 +295,19 @@ class Post_con extends RestController
             $this->response([
                 'status' => false,
                 'message' => 'Masukkan id postingan!'
-            ]);
+            ], 200);
         } else {
             if ($this->post->deletePost($id) > 0) {
                 $this->response([
                     'status' => true,
                     'id' => $id,
                     'message' => 'Postingan berhasil dihapus.'
-                ]);
+                ], 200);
             } else {
                 $this->response([
                     'status' => false,
                     'message' => 'id postingan tidak ditemukan!'
-                ]);
+                ], 200);
             }
         }
     }

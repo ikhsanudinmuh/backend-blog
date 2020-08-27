@@ -1,6 +1,6 @@
 function loadPost() {
 	$.ajax({
-		url: "http://localhost/rpl_blog/server/post_con/recent",
+		url: BASE_URL + "server/post_con/recent",
 		type: "GET",
 		dataType: "json",
 		success: function (data) {
@@ -9,10 +9,9 @@ function loadPost() {
 					`<div class="text-center">${data.message}</div>`
 				);
 			} else {
-				urlPost = "http://localhost/rpl_blog/post";
 				data.data.forEach((post) => {
 					$("#recent-post").append(`
-                        <a style="font-size:small" href="${urlPost}/detail/${post.slug}" class="list-group-item list-group-item-action">${post.title}</a>
+                        <a style="font-size:small" href="${BASE_URL}/post/detail/${post.slug}" class="list-group-item list-group-item-action">${post.title}</a>
                     `);
 				});
 			}

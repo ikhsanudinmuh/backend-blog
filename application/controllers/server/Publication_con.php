@@ -25,12 +25,12 @@
                 $this->response([
                     'status' => true,
                     'data' => $publication
-                ]);
+                ],200);
             } else {
                 $this->response([
                     'status' => false,
                     'message' => 'Publikasi belum ada!'
-                ]);
+                ],200);
             }
         }
 
@@ -48,12 +48,12 @@
                 $this->response([
                     'status' => true,
                     'message' => 'Publikasi berhasil ditambahkan!'
-                ]);
+                ],200);
             } else {
                 $this->response([
                     'status' => false,
                     'message' => 'Publikasi tidak berhasil ditambahkan!'
-                ]);
+                ],200);
             }
         }
 
@@ -71,18 +71,18 @@
                 $this->response([
                     'status' => false,
                     'message' => 'Masukkan id publikasi!'
-                ]);
+                ],200);
             }
             if($this->publication->editPublication($data, $id) > 0) {
                 $this->response([
                     'status' => true,
                     'message' => 'Publikasi berhasil diedit!'
-                ]);
+                ],200);
             } else {
                 $this->response([
                     'status' => false,
                     'message' => 'Id publikasi tidak ditemukan!'
-                ]);
+                ],200);
             }
         }
 
@@ -96,21 +96,20 @@
                 $this->response( [
                     'status' => false,
                     'message' => 'Masukkan id mata kuliah!'
-                ]);
+                ],200);
             } else {
                 if ($this->publication->deletePublication($id) > 0) {
                     $this->response([
                         'status' => true,
                         'message' => 'Publikasi berhasil dihapus!'
-                    ]);
+                    ],200);
                 } else {
                     $this->response([
                         'status' => false,
                         'message' => 'Id publikasi tidak ditemukan!'
-                    ]);
+                    ],200);
                 }
             }
             
         }
     }
-?>

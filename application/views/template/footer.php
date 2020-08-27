@@ -27,7 +27,7 @@
 
     </div>
 
-    <script>
+    <script type="text/javascript">
       loadPost();
 
       loadDataTable();
