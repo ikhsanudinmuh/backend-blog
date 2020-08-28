@@ -87,6 +87,24 @@ class Post_con extends RestController
         }
     }
 
+    public function category_get()
+    {
+        $category = $this->get('category');
+        $post = $this->post->getPostByCategory($category);
+
+        if ($post) {
+            $this->response([
+                'status' => true,
+                'data' => $post
+            ], 200);
+        } else {
+            $this->response([
+                'status' => false,
+                'message' => 'Postingan tidak ditemukan!'
+            ], 200);
+        }
+    }
+
     public function byId_get()
     {
         $id = $this->get('id');

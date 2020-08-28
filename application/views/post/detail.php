@@ -25,13 +25,11 @@
         <span class="badge bg-orange text-white" style="font-weight: 600;">
             Published by <u><?= $post['full_name'] ?></u> on <?= $post['date'] ?>
         </span>
-        <span class="badge badge-dark" style="font-weight: 600;">
-            <?php if ($post['cat_name'] == null) { ?>
-                Uncategorized
-            <?php } else { ?>
-                <?= $post['cat_name'] ?>
-            <?php } ?>
-        </span>
+        <?php if ($post['cat_name'] == null) { ?>
+            <a href="<?= base_url() ?>post/category/Uncategorized" class="badge badge-dark">Uncategorized</a>
+        <?php } else { ?>
+            <a href="<?= base_url() ?>post/category/<?= $post['cat_name'] ?>" class="badge badge-dark"><?= $post['cat_name'] ?></a>
+        <?php } ?>
     </div>
 </div>
 <hr>
@@ -44,11 +42,13 @@
     ?>
 </div>
 <hr>
-<?php if ($previous['status'] == true) { ?>
-    <a class="btn btn-outline-dark float-left" href="<?= base_url() ?>post/detail/<?= $previous['data'][0]['slug'] ?>" role="button"><i class="fas fa-caret-left"></i> Previous Post</a>
-<?php } ?>
-<?php if ($next['status'] == true) { ?>
-    <a class="btn btn-outline-dark float-right" href="<?= base_url() ?>post/detail/<?= $next['data'][0]['slug'] ?>" role="button">Next Post <i class="fas fa-caret-right"></i></a>
+<?php if ($post['status'] == 'active') { ?>
+    <?php if ($previous['status'] == true) { ?>
+        <a class="btn btn-outline-dark float-left" href="<?= base_url() ?>post/detail/<?= $previous['data'][0]['slug'] ?>" role="button"><i class="fas fa-caret-left"></i> Previous Post</a>
+    <?php } ?>
+    <?php if ($next['status'] == true) { ?>
+        <a class="btn btn-outline-dark float-right" href="<?= base_url() ?>post/detail/<?= $next['data'][0]['slug'] ?>" role="button">Next Post <i class="fas fa-caret-right"></i></a>
+    <?php } ?>
 <?php } ?>
 <br>
 <br>

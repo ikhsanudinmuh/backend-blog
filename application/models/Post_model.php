@@ -50,6 +50,18 @@ class Post_model extends CI_Model
         return $result['data'][0];
     }
 
+    public function getPostByCategory($category)
+    {
+        $response = $this->client->request('GET', 'server/post_con/category', [
+            'query' => [
+                'category' => $category
+            ]
+        ]);
+
+        $result = json_decode($response->getBody()->getContents(), true);
+        return $result;
+    }
+
     public function getPreviousPost($slug)
     {
         $response = $this->client->request('GET', 'server/post_con/previous', [

@@ -56,6 +56,24 @@ class Post_model extends CI_Model
         return $this->db->get()->result_array();
     }
 
+    public function getPostByCategory($category)
+    {
+        if ($category == 'Uncategorized') {
+            $this->db->select('post.post_id, post.title, post.content, post.img, post.status, post.slug, category.cat_name, post.date, admin.full_name')
+                ->from('post')
+                ->join('category', 'post.cat_id = category.id', 'left')
+                ->join('admin', 'post.username = admin.username', 'inner')
+                ->where(['post.cat_id' => null, 'post.status' => 'active']);
+        } else {
+            $this->db->select('post.post_id, post.title, post.content, post.img, post.status, post.slug, category.cat_name, post.date, admin.full_name')
+                ->from('post')
+                ->join('category', 'post.cat_id = category.id', 'left')
+                ->join('admin', 'post.username = admin.username', 'inner')
+                ->where(['category.cat_name' => $category, 'status' => 'active']);
+        }
+        return $this->db->get()->result_array();
+    }
+
     public function getPreviousPost($date)
     {
         $this->db->select('post.post_id, post.title, post.content, post.img, post.status, post.slug, category.cat_name, post.date, admin.full_name')

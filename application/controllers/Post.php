@@ -67,6 +67,17 @@ class Post extends CI_Controller
         }
     }
 
+    public function category($category)
+    {
+        $data['title'] = 'Category: ' . $category;
+        $data['category'] = $category;
+        $data['post'] = $this->post->getPostByCategory($category);
+
+        $this->load->view('template/header', $data);
+        $this->load->view('post/category', $data);
+        $this->load->view('template/footer');
+    }
+
     public function upload_config()
     {
         if ($this->session->userdata('status') != 'login') {
