@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Agu 2020 pada 09.48
+-- Waktu pembuatan: 28 Agu 2020 pada 05.43
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.2
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `rplblog`
+-- Database: `rpl_blog`
 --
 
 -- --------------------------------------------------------
@@ -44,7 +44,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`username`, `password`, `full_name`, `email`, `img`, `address`, `about`, `telephone`) VALUES
-('admin', '21232f297a57a5a743894a0e4a801fc3', 'Jati Hiliamsyah', 'jatihusen@telkomuniversity.ac.id', '990b7ee7c64ba3bf71459828a1a13583.png', 'Bandung', 'Jati Hiliamsyah Husen received his M.Eng. degree in Computer Science and Communication Engineering from Waseda University, Tokyo, Japan in 2018. Previously he received B.Eng. degree in computer science from Telkom University, Bandung, Indonesia in 2014. He currently serves as lecturer at Bachelor of Computer Science study program at School of Computing, Telkom University. He was an awardee of Indonesia Endowment Fund for Education for his master education granted in 2016. His research interest lies in software engineering domain, especially requirement engineering and software engineering for video game development.   Prior to taking his master study he worked in game development industry in Batavian Studio as junior programmer in 2015, working on general gameplay and audio programming.', '');
+('admin', '21232f297a57a5a743894a0e4a801fc3', 'Jati Hiliamsyah Husen', 'jatihusen@telkomuniversity.ac.id', '6938c7c194bc2f0f7bc4560cb02c0819.png', 'Bandung', 'Jati Hiliamsyah Husen received his M.Eng. degree in Computer Science and Communication Engineering from Waseda University, Tokyo, Japan in 2018. Previously he received B.Eng. degree in computer science from Telkom University, Bandung, Indonesia in 2014. He currently serves as lecturer at Bachelor of Computer Science study program at School of Computing, Telkom University. He was an awardee of Indonesia Endowment Fund for Education for his master education granted in 2016. His research interest lies in software engineering domain, especially requirement engineering and software engineering for video game development.   Prior to taking his master study he worked in game development industry in Batavian Studio as junior programmer in 2015, working on general gameplay and audio programming.', '');
 
 -- --------------------------------------------------------
 

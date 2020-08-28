@@ -18,8 +18,7 @@
 
         public function editMatkul($data, $id)
         {
-            $this->db->update('matkul', $data, ['id' => $id]);
-            return $this->db->affected_Rows();
+            return $this->db->update('matkul', $data, ['id' => $id]);
         }
 
         public function deleteMatkul($id)
@@ -28,4 +27,3 @@
             return $this->db->affected_Rows();
         }
     }
-?>

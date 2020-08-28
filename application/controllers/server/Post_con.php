@@ -193,7 +193,7 @@ class Post_con extends RestController
                 'message' => 'Masukkan id postingan!'
             ], 200);
         } else {
-            if ($this->post->editPost($data, $id) > 0) {
+            if ($this->post->editPost($data, $id)) {
                 $this->response([
                     'status' => true,
                     'message' => 'Postingan berhasil diedit.'
@@ -201,7 +201,7 @@ class Post_con extends RestController
             } else {
                 $this->response([
                     'status' => false,
-                    'message' => 'Id postingan tidak ditemukan!'
+                    'message' => 'Postingan tidak berhasil diedit!'
                 ], 200);
             }
         }
@@ -225,7 +225,7 @@ class Post_con extends RestController
                 'message' => 'Masukkan id postingan!'
             ], 200);
         } else {
-            if ($this->post->editPost($data, $id) > 0) {
+            if ($this->post->editPost($data, $id)) {
                 $this->response([
                     'status' => true,
                     'message' => 'Postingan berhasil diedit.'
@@ -233,7 +233,7 @@ class Post_con extends RestController
             } else {
                 $this->response([
                     'status' => false,
-                    'message' => 'Id postingan tidak ditemukan!'
+                    'message' => 'Postingan tidak berhasil diedit!'
                 ], 200);
             }
         }
@@ -257,7 +257,7 @@ class Post_con extends RestController
             } else {
                 $this->response([
                     'status' => false,
-                    'message' => 'id postingan tidak ditemukan!'
+                    'message' => 'Postingan tidak berhasil dipindahkan ke recycle bin!'
                 ], 200);
             }
         }
@@ -281,7 +281,7 @@ class Post_con extends RestController
             } else {
                 $this->response([
                     'status' => false,
-                    'message' => 'id postingan tidak ditemukan!'
+                    'message' => 'Postingan tidak berhasil dipulihkan!'
                 ], 200);
             }
         }
@@ -306,7 +306,7 @@ class Post_con extends RestController
             } else {
                 $this->response([
                     'status' => false,
-                    'message' => 'id postingan tidak ditemukan!'
+                    'message' => 'Postingan tidak berhasil dihapus!'
                 ], 200);
             }
         }

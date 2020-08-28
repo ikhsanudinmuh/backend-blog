@@ -48,7 +48,7 @@ class Category_con extends RestController
         } else {
             $this->response([
                 'status' => false,
-                'message' => 'Id kategori tidak ditemukan!'
+                'message' => 'Kategori tidak berhasil ditambahkan!'
             ], 200);
         }
     }
@@ -66,7 +66,7 @@ class Category_con extends RestController
                 'message' => 'Masukkan id kategori!'
             ], 200);
         } else {
-            if ($this->category->editCategory($data, $id) > 0) {
+            if ($this->category->editCategory($data, $id)) {
                 $this->response([
                     'status' => true,
                     'message' => 'Kategori berhasil diedit.'
@@ -74,7 +74,7 @@ class Category_con extends RestController
             } else {
                 $this->response([
                     'status' => false,
-                    'message' => 'Id kategori tidak ditemukan!'
+                    'message' => 'Kategori tidak berhasil diedit!'
                 ], 200);
             }
         }
@@ -99,7 +99,7 @@ class Category_con extends RestController
             } else {
                 $this->response([
                     'status' => false,
-                    'message' => 'Id kategori tidak ditemukan!'
+                    'message' => 'Kategori tidak berhasil dihapus!'
                 ], 200);
             }
         }

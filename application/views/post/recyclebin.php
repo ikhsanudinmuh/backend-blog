@@ -59,8 +59,8 @@
               <td>
                 <a href="<?= base_url() ?>post/detail/<?= $p['slug'] ?>" class="badge badge-primary"><i class="fas fa-info-circle"></i></a>
                 <a href="<?= base_url() ?>post/edit/<?= $p['post_id'] ?>" class="badge badge-warning text-white"><i class="fas fa-edit"></i></a>
-                <a href="<?= base_url() ?>post/restore/<?= $p['post_id'] ?>" class="badge badge-secondary"><i class="fas fa-trash-restore-alt"></i></a>
-                <a href="<?= base_url() ?>post/delete/<?= $p['post_id'] ?>" class="badge badge-danger" onclick="return confirm('Apakah anda yakin?')"><i class="far fa-trash-alt"></i></a>
+                <a href="<?= base_url() ?>post/restore/<?= $p['post_id'] ?>" class="badge badge-secondary" onclick="return confirm('Apakah anda yakin ingin mengaktifkan postingan ini?')"><i class="fas fa-trash-restore-alt"></i></a>
+                <a href="<?= base_url() ?>post/delete/<?= $p['post_id'] ?>" class="badge badge-danger" onclick="return confirm('Apakah anda yakin ingin menghapus postingan ini?')"><i class="far fa-trash-alt"></i></a>
               </td>
             <?php } ?>
           </tr>

@@ -101,8 +101,7 @@ class Post_model extends CI_Model
 
     public function editPost($data, $id)
     {
-        $this->db->update('post', $data, ['post_id' => $id]);
-        return $this->db->affected_Rows();
+        return $this->db->update('post', $data, ['post_id' => $id]);
     }
 
     public function tempdelPost($id)

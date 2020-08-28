@@ -71,7 +71,7 @@ class Matkul_con extends RestController
                 'message' => 'Masukkan id mata kuliah'
             ], 200);
         } else {
-            if ($this->matkul->editMatkul($data, $id) > 0) {
+            if ($this->matkul->editMatkul($data, $id)) {
                 $this->response([
                     'status' => true,
                     'message' => 'Mata kuliah berhasil diedit.'
@@ -79,7 +79,7 @@ class Matkul_con extends RestController
             } else {
                 $this->response([
                     'status' => false,
-                    'message' => 'Id mata kuliah tidak ditemukan!'
+                    'message' => 'Mata kuliah tidak berhasil diedit!'
                 ], 200);
             }
         }
@@ -104,7 +104,7 @@ class Matkul_con extends RestController
             } else {
                 $this->response([
                     'status' => false,
-                    'message' => 'Id mata kuliah tidak ditemukan!'
+                    'message' => 'Mata kuliah tidak berhasil dihapus!'
                 ], 200);
             }
         }

@@ -59,7 +59,7 @@
               <td>
                 <a href="<?= base_url() ?>post/detail/<?= $p['slug'] ?>" class="badge badge-primary"><i class="fas fa-info-circle"></i></a>
                 <a href="<?= base_url() ?>post/edit/<?= $p['post_id'] ?>" class="badge badge-warning"><i class="fas fa-edit" style="color:white"></i></a>
-                <a href="<?= base_url() ?>post/tempdel/<?= $p['post_id'] ?>" class="badge bg-orange text-white" onclick="return confirm('Apakah anda yakin?')"><i class="far fa-trash-alt"></i></a>
+                <a href="<?= base_url() ?>post/tempdel/<?= $p['post_id'] ?>" class="badge bg-orange text-white" onclick="return confirm('Apakah anda yakin ingin menghapus postingan ini untuk sementara?')"><i class="far fa-trash-alt"></i></a>
               </td>
             <?php } ?>
           </tr>

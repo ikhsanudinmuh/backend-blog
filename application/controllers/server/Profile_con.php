@@ -33,7 +33,7 @@ class Profile_con extends RestController
             'telephone' => $this->put('telephone')
         ];
 
-        if ($this->profile->editProfile($data, $username) > 0) {
+        if ($this->profile->editProfile($data, $username)) {
             $this->response([
                 'status' => true,
                 'message' => 'Profile berhasil diedit.'
@@ -87,7 +87,7 @@ class Profile_con extends RestController
             'telephone' => $this->put('telephone')
         ];
 
-        if ($this->profile->editProfile($data, $username) > 0) {
+        if ($this->profile->editProfile($data, $username)) {
             $this->response([
                 'status' => true,
                 'message' => 'Photo profile berhasil diedit.'
